@@ -1,0 +1,19 @@
+.about {
+  display: flex;
+}
+
+.about__text {
+  background-image: url('../images/rectangle.png');
+  background-repeat: no-repeat;
+  width: 50%;
+}
+
+.about__img {
+  background-image: url('../images/photo_about.png');
+  background-repeat: no-repeat;
+  width: 50%;
+}
+
+.about__detail {
+  text-transform: uppercase;
+}
