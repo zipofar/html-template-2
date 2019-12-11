@@ -1,7 +1,7 @@
-html body {
+html, body, input, textarea, button {
+  font: 16px $font-stack;
   padding: 0;
   margin: 0;
-  font: 16px $font-stack;
 }
 
 a {
