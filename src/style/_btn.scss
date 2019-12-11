@@ -24,22 +24,3 @@
   border: 1px solid transparent;
 }
 
-@each $color, $value in $btn-colors-light {
-  .btn-outline-#{$color} {
-    @include btn-outline($value);
-    &:hover {
-      @include btn-outline-hover($value);
-      color: $gray-600;
-    }
-  }
-}
-
-@each $color, $value in $btn-colors-dark {
-  .btn-outline-#{$color} {
-    @include btn-outline($value);
-    &:hover {
-      @include btn-outline-hover($value);
-      color: $white;
-    }
-  }
-}
