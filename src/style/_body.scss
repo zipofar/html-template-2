@@ -1,5 +1,5 @@
 html, body, input, textarea, button {
-  font: 16px $font-stack;
+  font: $font-size $font-stack;
 }
 
 html, body, input, textarea, button, a, p, h1, h2, h3, h4, h5, h6, ul {
@@ -18,4 +18,12 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   color: $gray-600;
+}
+
+h1 {
+  font-size: $h1;
+}
+
+h2 {
+  font-size: $h2;
 }

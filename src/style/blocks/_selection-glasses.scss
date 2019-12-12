@@ -1,0 +1,25 @@
+.selection-glasses {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(192.28deg, rgba(40, 38, 150, 0.98) 11.56%, #09ABE4 133.02%), url(../images/rectangle.png);
+}
+
+.selection-glasses__item {
+  width: 100%;
+}
+
+.selection-glasses__text-wrapper {
+  padding: 70px 90px;
+}
+
+.selection-glasses__text {
+  font-size: getRem(18);
+  margin-top: 40px;
+  line-height: getRem(24);
+}
+
+.selection-glasses__btn {
+  margin-top: 23px;
+  padding: getRem(16) getRem(71);
+  text-transform: uppercase;
+}

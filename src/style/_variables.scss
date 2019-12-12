@@ -19,10 +19,20 @@ $purple: #282696;
        url('../fonts/lato-v16-latin-regular.svg#Lato') format('svg'); /* Legacy iOS */
 }
 
+$font-size: 16px;
+$font-size-int: 16;
 $font-stack: Lato, Helvetica, sans-serif;
+
+@function getRem($px) {
+  @return ($px/$font-size-int) + rem;
+}
+
+$h1: getRem(40);
+$h2: getRem(30);
 
 $breakpoints: (
   sm: 760px,
   md: 1120px,
   xl: 1485px,
 );
+
