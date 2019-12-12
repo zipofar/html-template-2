@@ -21,21 +21,21 @@
   padding: 25px 50px;
 }
 
-@media screen and (max-width: 1120px) {
+@media screen and (min-width: map-get($breakpoints, md)) {
+  .stocks__block:first-child {
+    margin-right: 15px;
+  }
+  .stocks__block:last-child {
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints, md)) {
   .stocks__block {
     display: none;
   }
 
   .stocks__block:first-child {
     display: flex;
-  }
-}
-
-@media screen and (min-width: 1120px) {
-  .stocks__block:first-child {
-    margin-right: 15px;
-  }
-  .stocks__block:last-child {
-    margin-left: 15px;
   }
 }

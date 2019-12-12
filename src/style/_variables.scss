@@ -20,3 +20,9 @@ $purple: #282696;
 }
 
 $font-stack: Lato, Helvetica, sans-serif;
+
+$breakpoints: (
+  sm: 760px,
+  md: 1120px,
+  xl: 1485px,
+);
