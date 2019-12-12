@@ -3,11 +3,10 @@
 }
 
 .stocks__block {
-  border: 1px solid black;
   height: 440px;
   display: flex;
+  width: 100%;
   align-items: flex-end;
-  flex-basis: calc(50% - 15px);
 }
 
 .stock {
@@ -20,4 +19,23 @@
   width: 100%;
   background: linear-gradient(202.4deg, rgba(40, 38, 150, 0.85) 46.3%, #09ABE4 121.3%);
   padding: 25px 50px;
+}
+
+@media screen and (max-width: 1120px) {
+  .stocks__block {
+    display: none;
+  }
+
+  .stocks__block:first-child {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .stocks__block:first-child {
+    margin-right: 15px;
+  }
+  .stocks__block:last-child {
+    margin-left: 15px;
+  }
 }

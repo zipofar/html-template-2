@@ -1,5 +1,8 @@
 html, body, input, textarea, button {
   font: 16px $font-stack;
+}
+
+html, body, input, textarea, button, a, p, h1, h2, h3, h4, h5, h6, ul {
   padding: 0;
   margin: 0;
 }
@@ -8,27 +11,11 @@ a {
   text-decoration: none;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-
 p {
   color: $gray-300;
   line-height: 1.5rem;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   color: $gray-600;
-  margin-top: 0;
-}
-
-h2 {
-  color: $gray-600;
-  margin-top: 0;
-}
-
-h3 {
-  color: $gray-600;
-  margin-top: 0;
 }
