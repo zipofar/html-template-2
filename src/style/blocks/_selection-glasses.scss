@@ -1,7 +1,10 @@
 .selection-glasses {
   display: flex;
   justify-content: space-between;
-  background: linear-gradient(192.28deg, rgba(40, 38, 150, 0.98) 11.56%, #09ABE4 133.02%), url(../images/rectangle.png);
+  background: url(../images/rectangle.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .selection-glasses__item {
@@ -22,4 +25,33 @@
   margin-top: 23px;
   padding: getRem(16) getRem(71);
   text-transform: uppercase;
+}
+
+.selection-glasses__img-wrapper {
+  padding: 0 50px 50px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.selection-glasses__img {
+  background-image: url('../images/promo-glass.png');
+  height: 200px;
+  width: 500px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+}
+
+@media screen and (max-width: map-get($breakpoints, md)) {
+  .selection-glasses {
+    flex-direction: column-reverse;
+  }
+  .selection-glasses__img {
+
+  }
+
 }

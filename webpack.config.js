@@ -48,12 +48,17 @@ module.exports = {
             }
           }
         ]
-      }
+      },
+      {
+        test: /\.pug$/,
+        use: ["pug-loader"]
+      },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'template.html',
+      //template: 'template.html',
+      template: './src/index.pug',
     }),
       new CopyWebpackPlugin([
       {from:'src/images',to:'images', force: true}
