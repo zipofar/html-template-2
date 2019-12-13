@@ -1,5 +1,8 @@
-html, body, input, textarea, button {
-  font: $font-size $font-stack;
+html, body, p, a, span, input, textarea, button {
+  font-family: $font-stack;
+  font-size: $font-size;
+  font-weight: 300;
+  font-style: normal;
 }
 
 html, body, input, textarea, button, a, p, h1, h2, h3, h4, h5, h6, ul {
@@ -14,6 +17,7 @@ a {
 p {
   color: $gray-300;
   line-height: 1.5rem;
+  font-size: $p;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -26,4 +30,9 @@ h1 {
 
 h2 {
   font-size: $h2;
+  font-weight: 600;
+}
+
+div {
+  box-sizing: border-box;
 }

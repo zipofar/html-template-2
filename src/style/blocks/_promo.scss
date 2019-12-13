@@ -1,0 +1,35 @@
+.promo {
+  height: 550px;
+  display: flex;
+}
+
+.promo__text-item {
+  height: 100%;
+  width: 100%;
+  background-image: url('../images/rectangle.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 160px 145px 50px 90px;
+  box-sizing: border-box;
+}
+
+.promo__text {
+  display: block;
+  margin-top: 26px;
+}
+
+.promo__btn {
+  margin-top: 23px;
+  padding: getRem(16) getRem(71);
+  text-transform: uppercase;
+}
+
+.promo__img-item {
+  height: 100%;
+  width: 120%;
+  background-image: url('../images/promo_01.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
