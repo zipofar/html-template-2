@@ -28,7 +28,7 @@
 }
 
 .selection-glasses__img-wrapper {
-  padding: 0 50px 50px 0;
+  padding: getRem(50);
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -39,16 +39,22 @@
 
 .selection-glasses__img {
   background-image: url('../images/promo-glass.png');
-  height: 200px;
-  width: 500px;
+  height: 100%;
+  width: 100%;
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
 }
 
+@media screen and (min-width: map-get($breakpoints, md)) and (max-width: map-get($breakpoints, lg)) {
+  .selection-glasses__text-wrapper {
+    padding: getRem(50);
+  }
+}
+
 @media screen and (max-width: map-get($breakpoints, md)) {
   .selection-glasses__text-wrapper {
-    padding: 30px;
+    padding: getRem(30);
   }
 
   .selection-glasses {
