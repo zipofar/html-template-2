@@ -1,9 +1,27 @@
+@media screen and (min-width: map-get($breakpoints, lg)) {
+  html {
+    font-size: $font-size-lg;
+  }
+}
+
+@media screen and (min-width: map-get($breakpoints, sm)) and (max-width: map-get($breakpoints, lg)) {
+  html {
+    font-size: $font-size-md;
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints, sm)) {
+  html {
+    font-size: $font-size-sm;
+  }
+}
+
 html, body, p, a, span, input, textarea, button {
   font-family: $font-stack;
-  font-size: $font-size;
   font-weight: 300;
   font-style: normal;
 }
+
 
 html, body, input, textarea, button, a, p, h1, h2, h3, h4, h5, h6, ul {
   padding: 0;
@@ -11,12 +29,12 @@ html, body, input, textarea, button, a, p, h1, h2, h3, h4, h5, h6, ul {
 }
 
 a {
+  font-size: getRem(14);
   text-decoration: none;
 }
 
 p {
   color: $gray-300;
-  line-height: 1.5rem;
   font-size: $p;
 }
 
@@ -26,10 +44,16 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: $h1;
+  font-weight: 600;
 }
 
 h2 {
   font-size: $h2;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: $h3;
   font-weight: 600;
 }
 
