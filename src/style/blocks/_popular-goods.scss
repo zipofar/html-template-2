@@ -81,17 +81,16 @@
   font-size: .85rem;
 }
 
-@media screen and (min-width: map-get($breakpoints, xl)) {
-  .popular-products__cards-block {
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
+@media (min-width: 0px) {
   .product-card {
-    width: 360px;
+    display: none;
+  }
+  .product-card:first-child {
+    display: block;
   }
 }
 
-@media screen and (min-width: map-get($breakpoints, md)) and (max-width: map-get($breakpoints, xl)) {
+@media (min-width: map-get($breakpoints, md)) {
   .product-card {
     display: none;
   }
@@ -102,11 +101,24 @@
   }
 }
 
-@media screen and (max-width: map-get($breakpoints, md)) {
+@media (min-width: map-get($breakpoints, xl)) {
   .product-card {
     display: none;
   }
-  .product-card:first-child {
+  .product-card:nth-child(-n+3) {
+    flex-wrap: nowrap;
     display: block;
+    width: 100%;
+  }
+}
+
+@media (min-width: map-get($breakpoints, xxl)) {
+  .product-card {
+    display: none;
+  }
+  .product-card:nth-child(-n+4) {
+    flex-wrap: nowrap;
+    display: block;
+    width: 100%;
   }
 }
