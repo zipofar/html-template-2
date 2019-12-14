@@ -1,3 +1,40 @@
 .row {
   display: flex;
 }
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: map-get($breakpoints, sm)) {
+  .container {
+    max-width: map-get($container-sizes, sm);
+  }
+}
+
+@media (min-width: map-get($breakpoints, md)) {
+  .container {
+    max-width: map-get($container-sizes, md);
+  }
+}
+
+@media (min-width: map-get($breakpoints, lg)) {
+  .container {
+    max-width: map-get($container-sizes, lg);
+  }
+}
+
+@media (min-width: map-get($breakpoints, xl)) {
+  .container {
+    max-width: map-get($container-sizes, xl);
+  }
+}
+
+@media (min-width: map-get($breakpoints, xxl)) {
+  .container {
+    max-width: map-get($container-sizes, xxl);
+  }
+}

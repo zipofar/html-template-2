@@ -42,9 +42,18 @@ $h3: getRem(24);
 $p : getRem(18);
 
 $breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1470px,
+);
+
+$container-sizes: (
   sm: 540px,
   md: 720px,
   lg: 960px,
   xl: 1140px,
+  xxl: 1410px,
 );
 

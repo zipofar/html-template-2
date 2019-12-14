@@ -9,7 +9,7 @@
 }
 
 .about__header {
-  margin-bottom: 30px;
+  margin-bottom: getRem(30);
 }
 
 .about__text {
@@ -18,7 +18,7 @@
   background-size: cover;
   background-position: center;
   width: 100%;
-  padding: 60px 50px 40px 50px;
+  padding: getRem(60) getRem(50) getRem(40) getRem(50);
 }
 
 .about__img {
@@ -32,17 +32,20 @@
 
 .about__detail {
   text-transform: uppercase;
-  margin-top: 40px;
+  margin-top: getRem(40);
   display: inline-block;
   text-decoration: underline;
 }
 
-@media screen and (max-width: map-get($breakpoints, sm)) {
+@media screen and (max-width: map-get($breakpoints, md)) {
   .about__item {
     display: none;
   }
 
   .about__item:first-child {
     display: block;
+  }
+  .about__text {
+    padding: getRem(25) getRem(15);
   }
 }
