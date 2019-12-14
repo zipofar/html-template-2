@@ -82,30 +82,27 @@
 }
 
 @media screen and (min-width: map-get($breakpoints, xl)) {
+  .popular-products__cards-block {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
   .product-card {
-    display: none;
+    width: 360px;
   }
 }
 
-@media screen and (min-width: map-get($breakpoints, md)) {
-  .product-card {
-    display: none;
-  }
-  .product-card:nth-child(-n+3) {
-    display: block;
-  }
-}
-
-@media screen and (min-width: map-get($breakpoints, sm)) {
+@media screen and (min-width: map-get($breakpoints, md)) and (max-width: map-get($breakpoints, xl)) {
   .product-card {
     display: none;
   }
   .product-card:nth-child(-n+2) {
+    flex-wrap: nowrap;
     display: block;
+    width: 100%;
   }
 }
 
-@media screen and (max-width: map-get($breakpoints, sm)) {
+@media screen and (max-width: map-get($breakpoints, md)) {
   .product-card {
     display: none;
   }
