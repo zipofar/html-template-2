@@ -57,7 +57,6 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      //template: 'template.html',
       template: './src/index.pug',
     }),
       new CopyWebpackPlugin([
@@ -66,5 +65,6 @@ module.exports = {
   ],
   output: {
     path: path.resolve(__dirname, 'docs'),
+    //publicPath: 'http://0.0.0.0:8080/'
   },
 };

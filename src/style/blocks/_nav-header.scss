@@ -1,0 +1,10 @@
+.nav-header__primary-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-header__logo {
+  height: 54px;
+  width: 216px;
+  background-image: url('../images/logo.svg');
+}
