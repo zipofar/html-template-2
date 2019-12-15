@@ -36,6 +36,10 @@
   margin-bottom: .4rem;
 }
 
+.nav-header__navbar {
+  margin-bottom: getRem(50);
+}
+
 .login-block {
   display: flex;
   align-items: flex-start;
@@ -112,70 +116,5 @@
   color: $gray-300;
   &:hover {
     color: $blue;
-  }
-}
-
-.nav-icon {
-  font-size: getRem(12);
-  font-weight: 600;
-  color: $gray-300;
-  &:hover {
-    color: $purple;
-  }
-  &:before {
-    display: inline-block;
-    width: getRem(16);
-    height: getRem(16);
-    margin-right: getRem(10);
-    vertical-align: middle;
-    content: '';
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
-
-.nav-icon__poor-vision {
-  &:before {
-    background-image: url('../images/icon_eye.svg');
-  }
-  &:hover:before {
-    background-image: url('../images/icon_eye-blue.svg');
-  }
-}
-
-.nav-icon__comparison {
-  &:before {
-    background-image: url('../images/icon_bars_graphic.svg');
-  }
-  &:hover:before {
-    background-image: url('../images/icon_bars_graphic-blue.svg');
-  }
-}
-
-.nav-icon__instagram {
-  &:before {
-    background-image: url('../images/icon_instagram.svg');
-  }
-  &:hover:before {
-    background-image: url('../images/icon_instagram-blue.svg');
-  }
-}
-
-.nav-icon__twitter {
-  &:before {
-    background-image: url('../images/icon_twitter.svg');
-  }
-  &:hover:before {
-    background-image: url('../images/icon_twitter-blue.svg');
-  }
-}
-
-.nav-icon__vk {
-  &:before {
-    background-image: url('../images/icon_vk.svg');
-  }
-  &:hover:before {
-    background-image: url('../images/icon_vk-blue.svg');
   }
 }

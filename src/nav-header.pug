@@ -6,9 +6,10 @@ section(class="nav-header")
       .secondary-nav__item
         span.nav-icon.nav-icon__comparison Сравнение товаров
       .secondary-nav__item
-        a(class="nav-icon nav-icon__instagram" href="#")
-        a(class="nav-icon nav-icon__twitter" href="#")
-        a(class="nav-icon nav-icon__vk" href="#")
+        .social
+          a(class="nav-icon nav-icon__instagram" href="#")
+          a(class="nav-icon nav-icon__twitter" href="#")
+          a(class="nav-icon nav-icon__vk" href="#")
     .secondary-nav
       .secondary-nav__item
         a(href="#" class="secondary-nav__link") Оплата
@@ -34,4 +35,5 @@ section(class="nav-header")
       a(href="#" class="login-block__item")
         span.login-block__icon(style="background-image: url('images/icon-cart.png');")
         span.login-block__text Корзина (10)
-  include navbar
+  .nav-header__navbar
+    include navbar
