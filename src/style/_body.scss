@@ -29,13 +29,17 @@ html, body, input, textarea, button, a, p, h1, h2, h3, h4, h5, h6, ul {
 }
 
 a {
-  font-size: getRem(14);
+  font-size: $font-size-a;
   text-decoration: none;
+}
+
+input {
+  font-size: $font-size-input;
 }
 
 p {
   color: $gray-300;
-  font-size: $p;
+  font-size: $font-size-p;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -43,17 +47,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: $h1;
+  font-size: $font-size-h1;
   font-weight: 600;
 }
 
 h2 {
-  font-size: $h2;
+  font-size: $font-size-h2;
   font-weight: 600;
 }
 
 h3 {
-  font-size: $h3;
+  font-size: $font-size-h3;
   font-weight: 600;
 }
 

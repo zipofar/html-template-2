@@ -1,10 +1,76 @@
 .nav-header__primary-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: getRem(60);
 }
 
 .nav-header__logo {
   height: 54px;
   width: 216px;
   background-image: url('../images/logo.svg');
+}
+
+.nav-header__search-input {
+  padding-bottom: .4rem;
+  padding-right: 1rem;
+  border: solid;
+  border-width: 0 0 1px 0;
+  border-color: $gray-100;
+  outline: none;
+}
+
+.nav-header__search-input-wrapper {
+  position: relative;
+}
+
+.nav-header__icon-lens {
+  height: getRem(16);
+  width: getRem(16);
+  background-image: url('../images/icon-lens.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: .4rem;
+}
+
+.login-block {
+  display: flex;
+  align-items: flex-start;
+}
+
+.login-block__item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: $gray-600;
+  &:first-child {
+    padding-right: 20px;
+    border: solid;
+    border-width: 0 1px 0 0;
+    border-color: $gray-100;
+  }
+  &:last-child {
+    padding-left: 20px;
+  }
+  &:hover .login-block__text {
+    text-decoration: underline;
+  }
+}
+
+.login-block__icon {
+  margin-right: getRem(12);
+  width: getRem(21);
+  height: getRem(21);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.login-block__text {
+  font-weight: 400;
+  font-size: getRem(14);
 }

@@ -7,23 +7,33 @@ $blue-hover: #0096CB;
 $purple: #282696;
 
 @font-face {
-    font-family: 'Lato';
-    src: local('Lato Light'), local('Lato-Light'),
-      url('../fonts/latolight.woff2') format('woff2'),
-      url('../fonts/latolight.woff') format('woff'),
-      url('../fonts/latolight.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-  }
+  font-family: 'Lato';
+  src: local('Lato Light'), local('Lato-Light'),
+    url('../fonts/latolight.woff2') format('woff2'),
+    url('../fonts/latolight.woff') format('woff'),
+    url('../fonts/latolight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
 
 @font-face {
-    font-family: 'Lato';
-    src: local('Lato Semibold'), local('Lato-Semibold'),
-      url('../fonts/latosemibold.woff2') format('woff2'),
-      url('../fonts/latosemibold.woff') format('woff'),
-      url('../fonts/latosemibold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
+  font-family: 'Lato';
+  src: local('Lato Light'), local('Lato-Light'),
+    url('../fonts/latoregular.woff2') format('woff2'),
+    url('../fonts/latoregular.woff') format('woff'),
+    url('../fonts/latoregular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato Semibold'), local('Lato-Semibold'),
+    url('../fonts/latosemibold.woff2') format('woff2'),
+    url('../fonts/latosemibold.woff') format('woff'),
+    url('../fonts/latosemibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
 }
 
 $font-stack: Lato, Helvetica, sans-serif;
@@ -36,10 +46,12 @@ $font-size-sm: 14px;
   @return ($px/$font-size-base) + rem;
 }
 
-$h1: getRem(40);
-$h2: getRem(30);
-$h3: getRem(24);
-$p : getRem(18);
+$font-size-h1: getRem(40);
+$font-size-h2: getRem(30);
+$font-size-h3: getRem(24);
+$font-size-p : getRem(18);
+$font-size-a: getRem(14);
+$font-size-input: getRem(14);
 
 $breakpoints: (
   sm: 576px,
