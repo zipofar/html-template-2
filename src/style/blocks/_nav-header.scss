@@ -8,7 +8,6 @@
 .nav-header__logo {
   height: 54px;
   width: 216px;
-  background-image: url('../images/logo.svg');
 }
 
 .nav-header__search-input {
@@ -47,14 +46,14 @@
   align-items: center;
   cursor: pointer;
   color: $gray-600;
-  &:first-child {
-    padding-right: 20px;
-    border: solid;
-    border-width: 0 1px 0 0;
-    border-color: $gray-100;
-  }
+  padding-right: 20px;
+  border: solid;
+  border-width: 0 1px 0 0;
+  border-color: $gray-100;
   &:last-child {
     padding-left: 20px;
+    padding-right: 0px;
+    border: none;
   }
   &:hover .login-block__text {
     text-decoration: underline;
@@ -73,4 +72,110 @@
 .login-block__text {
   font-weight: 400;
   font-size: getRem(14);
+}
+
+.secondary-nav__item {
+  cursor: pointer;
+  color: $gray-600;
+  padding: 0px 20px;
+  border: solid;
+  border-width: 0 0 0 1px;
+  border-color: $gray-100;
+  &:first-child {
+    padding: 0px 20px 0px 0px;
+    border: none;
+  }
+  &:last-child {
+    border-width: 0 0 0 1px;
+    padding: 0px 0px 0px 20px;
+  }
+  &:hover .secondary-nav__text {
+    text-decoration: underline;
+  }
+}
+
+.nav-header__secondary-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: getRem(60);
+}
+
+.secondary-nav {
+  display: flex;
+  align-items: center;
+}
+
+
+.secondary-nav__link {
+  font-size: getRem(12);
+  font-weight: 400;
+  color: $gray-300;
+  &:hover {
+    color: $blue;
+  }
+}
+
+.nav-icon {
+  font-size: getRem(12);
+  font-weight: 600;
+  color: $gray-300;
+  &:hover {
+    color: $purple;
+  }
+  &:before {
+    display: inline-block;
+    width: getRem(16);
+    height: getRem(16);
+    margin-right: getRem(10);
+    vertical-align: middle;
+    content: '';
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.nav-icon__poor-vision {
+  &:before {
+    background-image: url('../images/icon_eye.svg');
+  }
+  &:hover:before {
+    background-image: url('../images/icon_eye-blue.svg');
+  }
+}
+
+.nav-icon__comparison {
+  &:before {
+    background-image: url('../images/icon_bars_graphic.svg');
+  }
+  &:hover:before {
+    background-image: url('../images/icon_bars_graphic-blue.svg');
+  }
+}
+
+.nav-icon__instagram {
+  &:before {
+    background-image: url('../images/icon_instagram.svg');
+  }
+  &:hover:before {
+    background-image: url('../images/icon_instagram-blue.svg');
+  }
+}
+
+.nav-icon__twitter {
+  &:before {
+    background-image: url('../images/icon_twitter.svg');
+  }
+  &:hover:before {
+    background-image: url('../images/icon_twitter-blue.svg');
+  }
+}
+
+.nav-icon__vk {
+  &:before {
+    background-image: url('../images/icon_vk.svg');
+  }
+  &:hover:before {
+    background-image: url('../images/icon_vk-blue.svg');
+  }
 }

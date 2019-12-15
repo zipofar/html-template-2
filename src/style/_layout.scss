@@ -9,31 +9,53 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+@media (min-width: 0) {
+  html {
+    font-size: $font-size-sm;
+  }
+}
+
 @media (min-width: map-get($breakpoints, sm)) {
+  html {
+    font-size: $font-size-sm;
+  }
   .container {
     max-width: map-get($container-sizes, sm);
   }
 }
 
 @media (min-width: map-get($breakpoints, md)) {
+  html {
+    font-size: $font-size-md;
+  }
   .container {
     max-width: map-get($container-sizes, md);
   }
 }
 
 @media (min-width: map-get($breakpoints, lg)) {
+  html {
+    font-size: $font-size-lg;
+  }
   .container {
     max-width: map-get($container-sizes, lg);
   }
 }
 
 @media (min-width: map-get($breakpoints, xl)) {
+  html {
+    font-size: $font-size-lg;
+  }
   .container {
     max-width: map-get($container-sizes, xl);
   }
 }
 
 @media (min-width: map-get($breakpoints, xxl)) {
+  html {
+    font-size: $font-size-lg;
+  }
   .container {
     max-width: map-get($container-sizes, xxl);
   }

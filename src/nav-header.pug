@@ -1,7 +1,24 @@
 section(class="nav-header")
   .nav-header__secondary-header
+    .secondary-nav
+      .secondary-nav__item
+        span.nav-icon.nav-icon__poor-vision Версия для слабовидящих
+      .secondary-nav__item
+        span.nav-icon.nav-icon__comparison Сравнение товаров
+      .secondary-nav__item
+        a(class="nav-icon nav-icon__instagram" href="#")
+        a(class="nav-icon nav-icon__twitter" href="#")
+        a(class="nav-icon nav-icon__vk" href="#")
+    .secondary-nav
+      .secondary-nav__item
+        a(href="#" class="secondary-nav__link") Оплата
+      .secondary-nav__item
+        a(href="#" class="secondary-nav__link") Доставка
+      .secondary-nav__item
+        a(href="#" class="secondary-nav__link") Возврат и обмен
+
   .nav-header__primary-header
-    .nav-header__logo
+    .nav-header__logo.main-logo
     .nav-header__telephone
       h3 (8184) 52-96-33
     .nav-header__search
@@ -9,6 +26,7 @@ section(class="nav-header")
         .nav-header__search-input-wrapper
           input(type="text" class="nav-header__search-input")
           .nav-header__icon-lens
+
     .login-block
       a(href="#" class="login-block__item")
         span.login-block__icon(style="background-image: url('images/icon-profile.png');")
