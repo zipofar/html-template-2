@@ -19,7 +19,8 @@
 }
 
 .footer__info-block-item {
-  width: 260px;
+  min-width: 260px;
+  width: calc(25% - 20px);
 }
 
 .footer__item-title {
