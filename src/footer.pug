@@ -1,40 +1,48 @@
-.footer__menu
-  .footer__logo.main-logo
-  .footer__navbar
-    include navbar
-.footer__info-block
-  .footer__info-block-item
-    p.footer__text-content
-      |ООО «Оптик-Центр» <br />
-      |ОГРН 1032901007853
-    p.footer__text-content 164500, г. Северодвинск, ул. Ломоносова, д. 73
-    p.footer__text-content Информация на сайте не является публичной офертой и носит справочный характер.
-  .footer__info-block-item
-    p.footer__item-title МАГАЗИНЫ
-    p.footer__text-content 164500, г. Северодвинск, ул. Советская, д. 50/12
-    p.footer__text-content 163000, г. Архангельск, ул. набережная Северной Двины, д. 93
-  .footer__info-block-item
-    p.footer__item-title Контактная информация
-    h3.footer__text-content (8184) 52-96-33
-    a(href="mailto: office@moda-optic.ru", class="footer__link") office@moda-optic.ru
+.footer
+  .footer__menu
+    .footer__logo.main-logo
+    .footer__navbar
+      include navbar
+    .footer__collapsed-contacts
+      h3.footer__text-content (8184) 52-96-33
+      a(href="mailto: office@moda-optic.ru", class="footer__link") office@moda-optic.ru
+      .footer__icon-block
+        include social
+      p.footer__text-content
+        |Интернет-магазин "Мода-оптик". <a href="#" class="footer__inline-link">Пользовательское соглашение</a> <br />
+  .footer__info-block
+    .footer__info-block-item
+      p.footer__text-content
+        |ООО «Оптик-Центр» <br />
+        |ОГРН 1032901007853
+      p.footer__text-content 164500, г. Северодвинск, ул. Ломоносова, д. 73
+      p.footer__text-content Информация на сайте не является публичной офертой и носит справочный характер.
+    .footer__info-block-item
+      p.footer__item-title МАГАЗИНЫ
+      p.footer__text-content 164500, г. Северодвинск, ул. Советская, д. 50/12
+      p.footer__text-content 163000, г. Архангельск, ул. набережная Северной Двины, д. 93
+    .footer__info-block-item
+      p.footer__item-title Контактная информация
+      h3.footer__text-content (8184) 52-96-33
+      a(href="mailto: office@moda-optic.ru", class="footer__link") office@moda-optic.ru
+      .footer__icon-block
+        p.footer__icon-block-title Мы в соц.сетях:
+        include social
+    .footer__info-block-item
+      p.footer__text-content Подпишитесь на наши новости и акции, чтобы быть в курсе
+      form(class="describe-form")
+        input(class="describe-form__input" type="text" placeholder="Ваш  e-mail")
+        button.describe-form__btn
+      a(href="#", class="footer__link") Договор оферты
+      a(href="#", class="footer__link") Политика конфиденциальности
+  .footer__misc-info
+    .footer__item
+      p.footer__text-content
+        |Интернет-магазин "Мода-оптик". <a href="#" class="footer__inline-link">Пользовательское соглашение</a> <br />
+        |Имеются противопоказания, необходимо проконсультироваться со специалистом
     .footer__icon-block
-      p.footer__icon-block-title Мы в соц.сетях:
-      include social
-  .footer__info-block-item
-    p.footer__text-content Подпишитесь на наши новости и акции, чтобы быть в курсе
-    form(class="describe-form")
-      input(class="describe-form__input" type="text" placeholder="Ваш  e-mail")
-      button.describe-form__btn
-    a(href="#", class="footer__link") Договор оферты
-    a(href="#", class="footer__link") Политика конфиденциальности
-.footer__misc-info
-  .footer__item
-    p.footer__text-content
-      |Интернет-магазин "Мода-оптик". <a href="#" class="footer__inline-link">Пользовательское соглашение</a> <br />
-      |Имеются противопоказания, необходимо проконсультироваться со специалистом
-  .footer__icon-block
-    p.footer__icon-block-title Принимаем к оплате:
-    span.static-icon.static-icon__card-visa
-    span.static-icon.static-icon__card-mastercard
-    span.static-icon.static-icon__card-maestro
-    span.static-icon.static-icon__card-mir
+      p.footer__icon-block-title Принимаем к оплате:
+      span.static-icon.static-icon__card-visa
+      span.static-icon.static-icon__card-mastercard
+      span.static-icon.static-icon__card-maestro
+      span.static-icon.static-icon__card-mir
