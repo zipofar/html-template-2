@@ -8,6 +8,7 @@ html, body, p, a, span, input, textarea, button {
 html, body, input, textarea, button, a, p, h1, h2, h3, h4, h5, h6, ul {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 a {

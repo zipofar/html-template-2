@@ -19,21 +19,24 @@ section(class="nav-header")
         a(href="#" class="secondary-nav__link") Возврат и обмен
 
   .nav-header__primary-header
-    .nav-header__logo.main-logo
+    .nav-header__logo-block
+      span.nav-header__menu-toggler
+      span.nav-header__logo.main-logo
     .nav-header__telephone
       h3 (8184) 52-96-33
     .nav-header__search
       form.nav-header__search-form
         .nav-header__search-input-wrapper
-          input(type="text" class="nav-header__search-input")
+          input(type="text" class="nav-header__search-input" placeholder="Искать")
           .nav-header__icon-lens
 
     .login-block
       a(href="#" class="login-block__item")
         span.login-block__icon(style="background-image: url('images/icon-profile.png');")
-        span.login-block__text Вход/Регистрация
+        span.login-block__text.login-block__collapsed Вход/Регистрация
       a(href="#" class="login-block__item")
         span.login-block__icon(style="background-image: url('images/icon-cart.png');")
-        span.login-block__text Корзина (10)
+        span.login-block__text.login-block__collapsed Корзина
+        span.login-block__text (10)
   .nav-header__navbar
     include navbar
