@@ -20,7 +20,7 @@ section(class="nav-header")
 
   .nav-header__primary-header
     .nav-header__logo-block
-      span.nav-header__menu-toggler
+      span(class="nav-header__menu-toggler navbar-toggler" for="nav-header__navbar")
       span.nav-header__logo.main-logo
     .nav-header__telephone
       h3 (8184) 52-96-33
@@ -38,5 +38,5 @@ section(class="nav-header")
         span.login-block__icon(style="background-image: url('images/icon-cart.png');")
         span.login-block__text.login-block__collapsed Корзина
         span.login-block__text (10)
-  .nav-header__navbar
+  .nav-header__navbar.navbar-collapse
     include navbar
