@@ -7,6 +7,7 @@ export default (classNameToggler = 'navbar-toggler') => {
   elToggler.addEventListener('click', () => {
     const heightNavbar = elNavbar.clientHeight;
     const isShow = elNavbarWrapper.classList.contains('show');
+    console.log('btn ' + isShow)
     if (isShow) {
       elNavbarWrapper.classList.remove('show');
       elNavbarWrapper.style.height = '';
