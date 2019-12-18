@@ -77,6 +77,10 @@
   font-size: .85rem;
 }
 
+.product-card__btn-group .btn:first-child {
+  margin-right: .5rem;
+}
+
 @media (min-width: 0px) {
   .product-card {
     display: none;

@@ -1,4 +1,5 @@
 .btn {
+  font-weight: 400;
   display: inline-block;
   text-align: center;
   vertical-align: middle;
@@ -34,16 +35,32 @@
   }
 }
 
-.btn-outline-primary:hover .icon-compare {
-    background-image: url("data:image/svg+xml,%3Csvg width='15' height='17' viewBox='0 0 15 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 16.2999V3.70012C15 3.31335 14.8081 3 14.5715 3H12.4285C12.1918 3 12 3.31335 12 3.70012V16.2999C12 16.6868 12.1918 17 12.4285 17H14.5714C14.8081 17 15 16.6868 15 16.2999Z' fill='%23FFFFFF'/%3E%3Cpath d='M6.40006 17H8.60002C8.82095 17 9 16.6543 9 16.2271V0.772706C9 0.345751 8.82095 2.42006e-09 8.60002 2.42006e-09H6.40006C6.17905 2.42006e-09 6 0.345751 6 0.772706V16.2271C6 16.6543 6.17897 17 6.40006 17Z' fill='%23FFFFFF'/%3E%3Cpath d='M0.428559 6C0.191761 6 0 6.35156 0 6.78569V16.2141C0 16.6484 0.191761 17 0.428559 17H2.57144C2.80824 17 3 16.6484 3 16.2141V6.78569C3 6.35156 2.80824 6 2.57144 6H0.428559Z' fill='%23FFFFFF'/%3E%3C/svg%3E");
+.btn-outline-primary:hover .btn__icon-compare {
+  background-image: url('../images/icon_compare-white.svg');
 }
 
-.icon-compare {
+.btn__icon-compare {
  display: inline-block;
- height: 1rem;
- width: 1rem;
+ height: .9rem;
+ width: .9rem;
  vertical-align: text-bottom;
- background-image: url("data:image/svg+xml,%3Csvg width='15' height='17' viewBox='0 0 15 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 16.2999V3.70012C15 3.31335 14.8081 3 14.5715 3H12.4285C12.1918 3 12 3.31335 12 3.70012V16.2999C12 16.6868 12.1918 17 12.4285 17H14.5714C14.8081 17 15 16.6868 15 16.2999Z' fill='%2309ABE4'/%3E%3Cpath d='M6.40006 17H8.60002C8.82095 17 9 16.6543 9 16.2271V0.772706C9 0.345751 8.82095 2.42006e-09 8.60002 2.42006e-09H6.40006C6.17905 2.42006e-09 6 0.345751 6 0.772706V16.2271C6 16.6543 6.17897 17 6.40006 17Z' fill='%2309ABE4'/%3E%3Cpath d='M0.428559 6C0.191761 6 0 6.35156 0 6.78569V16.2141C0 16.6484 0.191761 17 0.428559 17H2.57144C2.80824 17 3 16.6484 3 16.2141V6.78569C3 6.35156 2.80824 6 2.57144 6H0.428559Z' fill='%2309ABE4'/%3E%3C/svg%3E%0A");
+ background-image: url('../images/icon_compare.svg');
  background-size: cover;
  background-position: center;
+}
+
+.btn__state-finish {
+  background: linear-gradient(249.3deg, #282696 0%, #09ABE4 100%);
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25);
+  color: $white;
+  &:before {
+    content: '';
+    background-image: url(../images/icon_arrow-right-solid.svg);
+    width: 0.77778rem;
+    height: 0.77778rem;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 }

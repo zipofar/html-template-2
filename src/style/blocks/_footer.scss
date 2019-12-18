@@ -88,6 +88,7 @@
   font-size: getRem(14);
   border: none;
   outline: none;
+  cursor: pointer;
   padding: getRem(11) getRem(15);
   background: linear-gradient(228.78deg, rgba(40, 38, 150, 0.96) 0%, #09ABE4 100%);
   &:before {
