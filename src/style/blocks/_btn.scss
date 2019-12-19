@@ -8,6 +8,7 @@
   line-height: 1.5;
   cursor: pointer;
   outline: none;
+  position: relative;
   &:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   }
@@ -15,6 +16,12 @@
 
 .btn-icon {
   padding: .75rem .9rem;
+  &:before {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    display: block;
+  }
 }
 
 .btn-outline-primary {
@@ -54,27 +61,17 @@
   }
 }
 
-.btn-outline-primary:hover .btn__icon-compare {
-  background-image: url('../images/icon_compare-white.svg');
-}
-
-.btn__icon-compare {
-  display: inline-block;
-  height: .9rem;
-  width: .9rem;
-  vertical-align: text-bottom;
-  background-image: url('../images/icon_compare.svg');
-  background-size: cover;
-  background-position: center;
-}
-
 .btn-fill-icon {
-  width: getRem(14);
-  height: getRem(14);
-  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-size: 50%;
+  background-position-x: center;
+  background-position-y: center;
   background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: contain;
 }
 
 .btn-sub-icon {
@@ -95,3 +92,12 @@
   background-image: url(../images/icon__arrow-right.svg);
   vertical-align: middle;
 }
+
+.icon__compare {
+  background-image: url(../images/icon__compare-blue.svg);
+  vertical-align: middle;
+  &:hover {
+    background-image: url('../images/icon__compare-white.svg');
+  }
+}
+
