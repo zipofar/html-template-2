@@ -30,9 +30,11 @@
         include social
     .footer__info-block-item
       p.footer__text-content Подпишитесь на наши новости и акции, чтобы быть в курсе
-      form(class="describe-form")
-        input(class="describe-form__input" type="text" placeholder="Ваш  e-mail")
-        button.describe-form__btn
+      .form-email
+        form
+          .form-email__group
+            input(class="form-email__input" type="text" placeholder="Ваш  e-mail")
+            button.btn.btn-primary.btn-icon <span class="btn-fill-icon icon__arrow-right"></span>
       a(href="#", class="footer__link") Договор оферты
       a(href="#", class="footer__link") Политика конфиденциальности
   .footer__misc-info

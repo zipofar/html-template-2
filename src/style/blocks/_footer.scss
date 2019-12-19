@@ -71,36 +71,22 @@
   justify-content: space-between;
 }
 
-.describe-form {
+.form-email {
   margin-bottom: 1rem;
 }
 
-.describe-form__input {
+.form-email__group {
+  display: flex;
+}
+
+.form-email__input {
+  width: 100%;
   background-color: #F7F7F7;
   font-size: getRem(14);
   color: #8C8C8C;
   border: none;
   outline: none;
-  padding: getRem(11) getRem(18);
-}
-
-.describe-form__btn {
-  font-size: getRem(14);
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: getRem(11) getRem(15);
-  background: linear-gradient(228.78deg, rgba(40, 38, 150, 0.96) 0%, #09ABE4 100%);
-  &:before {
-    content: '';
-    background-image: url('../images/icon_arrow-right-solid.svg');
-    width: getRem(14);
-    height: getRem(14);
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-  }
+  padding: .75rem 1.3rem;
 }
 
 .footer__collapsed-contacts {
