@@ -11,5 +11,5 @@ build:
 	rm -rf ./docs
 	NODE_ENV=production npx webpack
 
-deploy: build
+deploy: build lint
 	git push origin master
