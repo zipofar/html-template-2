@@ -4,6 +4,9 @@ dev:
 install:
 	yarn install
 
+lint:
+	npx eslint .
+
 build:
 	rm -rf ./docs
 	NODE_ENV=production npx webpack

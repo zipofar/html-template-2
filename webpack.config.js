@@ -19,7 +19,7 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
-         use: [
+        use: [
           'style-loader',
           'css-loader',
           'sass-loader',
@@ -28,14 +28,14 @@ module.exports = {
       {
         test: /\.(png|jpe?g|gif|svg)$/,
         use: [
-         {
-           loader: "file-loader",
-           options: {
-             outputPath: 'images',
-             name: './[name].[ext]'
-           }
-         }
-       ],
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'images',
+              name: './[name].[ext]',
+            },
+          },
+        ],
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
@@ -44,14 +44,14 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'fonts/'
-            }
-          }
-        ]
+              outputPath: 'fonts/',
+            },
+          },
+        ],
       },
       {
         test: /\.pug$/,
-        use: ["pug-loader"]
+        use: ['pug-loader'],
       },
     ],
   },
@@ -59,12 +59,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.pug',
     }),
-      new CopyWebpackPlugin([
-      {from:'src/images',to:'images', force: true}
+    new CopyWebpackPlugin([
+      { from: 'src/images', to: 'images', force: true },
     ]),
   ],
   output: {
     path: path.resolve(__dirname, 'docs'),
-    //publicPath: 'http://0.0.0.0:8080/'
   },
 };
