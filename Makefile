@@ -4,6 +4,8 @@ dev:
 install:
 	yarn install
 
+compose: install dev
+
 lint:
 	npx eslint .
 

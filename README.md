@@ -1,9 +1,16 @@
 ## About
 
 ## Demo
-https://zipofar.github.io/html-template-2/index.html
+<https://zipofar.github.io/html-template-2>
+
+## Run
+```
+  $ make compose
+```
+
+- Open <http://localhost:8080>
 
 ## Development
 ```
-  $ make install && make dev
+  $ make dev
 ```
