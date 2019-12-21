@@ -2,23 +2,30 @@ import { watch } from 'melanke-watchjs';
 
 export default () => {
   const state = {
-    addedToCard: [],
+    addedToCart: [],
+    totalInCart: 0,
   };
-  const elButtonsAddToCard = document.querySelectorAll('.popular-products button[action="addToCard"]');
+  const elButtonsAddToCart = document.querySelectorAll('.popular-products button[action="addToCart"]');
+  const elTotalCart = document.getElementById('total-in-cart');
 
-  elButtonsAddToCard.forEach((e) => e.addEventListener('click', (el) => {
+  elButtonsAddToCart.forEach((e) => e.addEventListener('click', (el) => {
     const elBtn = el.target;
     const idProduct = elBtn.attributes['data-id'].value;
-    if (state.addedToCard.includes(idProduct)) {
+    if (state.addedToCart.includes(idProduct)) {
       return;
     }
-    state.addedToCard.push(idProduct);
+    state.addedToCart.push(idProduct);
+    state.totalInCart += 1;
   }));
 
-  watch(state, 'addedToCard', (prop, action, newvalue) => {
-    const elButtonAddToCard = document.querySelector(`.popular-products button[action="addToCard"][data-id="${newvalue}"]`);
-    elButtonAddToCard.classList.remove('btn-outline-primary');
-    elButtonAddToCard.classList.add('btn-primary');
-    elButtonAddToCard.innerHTML = '<span class="btn-sub-icon icon__check"></span> В КОРЗИНE';
+  watch(state, 'addedToCart', (prop, action, newvalue) => {
+    const elButtonAddToCart = document.querySelector(`.popular-products button[action="addToCart"][data-id="${newvalue}"]`);
+    elButtonAddToCart.classList.remove('btn-outline-primary');
+    elButtonAddToCart.classList.add('btn-primary');
+    elButtonAddToCart.innerHTML = '<span class="btn-sub-icon icon__check"></span> В КОРЗИНE';
+  });
+
+  watch(state, 'totalInCart', (prop, action, newvalue) => {
+    elTotalCart.innerHTML = `(${newvalue})`;
   });
 };
