@@ -66,7 +66,8 @@
 .product-card__new-price {
   color: $blue;
   display: block;
-  font-size: 1.125rem;
+  font-size: getRem(18);
+  font-weight: 600;
 
 }
 
@@ -74,11 +75,11 @@
   display: block;
   color: $gray-300;
   text-decoration: line-through;
-  font-size: .85rem;
+  font-size: getRem(14);
 }
 
 .product-card__btn-group .btn:first-child {
-  margin-right: .5rem;
+  margin-right: .2rem;
 }
 
 @media (min-width: 0px) {
