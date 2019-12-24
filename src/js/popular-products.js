@@ -1,7 +1,7 @@
 import { watch } from 'melanke-watchjs';
 
-const products = [
-  {
+const products = {
+  1: {
     id: 1,
     markerIsNew: true,
     name: 'DAVIDOFF Urban Coolness Sunglasses',
@@ -10,7 +10,7 @@ const products = [
     oldPrice: 15500,
     inCart: false,
   },
-  {
+  2: {
     id: 2,
     markerIsNew: false,
     name: 'ACUVUE OASYS with HydraLuxe (30 линз)',
@@ -19,7 +19,7 @@ const products = [
     oldPrice: 17500,
     inCart: false,
   },
-  {
+  3: {
     id: 3,
     markerIsNew: false,
     name: 'BULGARI NV-2345 Sunglasses',
@@ -27,7 +27,7 @@ const products = [
     newPrice: 18500,
     inCart: true,
   },
-  {
+  4: {
     id: 4,
     markerIsNew: true,
     name: 'DAVIDOFF Urban Coolness Sunglasses 2',
@@ -36,7 +36,7 @@ const products = [
     oldPrice: 15500,
     inCart: false,
   },
-];
+};
 
 const renderProductCard = (props) => {
   const {
@@ -81,44 +81,41 @@ const renderProductCard = (props) => {
   `;
 };
 
-const getProductsOnCart = (items) => { return items.filter((e) => (e.inCart === true)) };
-
 export default () => {
   const state = {
     products,
-    addedToCart: [...getProductsOnCart(products)],
-    totalInCart: getProductsOnCart(products).length,
+    totalOnCart: Object.keys(products).filter((key) => products[key].inCart).length,
   };
-  console.log(state)
 
-  const htmlProducts = state.products.map(renderProductCard).join('');
   const elMountPopularProducrs = document.getElementById('mount-pop-products');
+  const htmlProducts = Object.keys(state.products).map((key) => (renderProductCard(state.products[key]))).join('');
   elMountPopularProducrs.innerHTML = htmlProducts;
 
   const elButtonsAddToCart = document.querySelectorAll('.popular-products button[action="addToCart"]');
   const elTotalCart = document.getElementById('total-in-cart');
-  elTotalCart.innerHTML = `(${state.totalInCart})`;
+  elTotalCart.innerHTML = `(${state.totalOnCart})`;
 
   elButtonsAddToCart.forEach((e) => e.addEventListener('click', (el) => {
     const elBtn = el.target;
-    const idProduct = Number.parseInt(elBtn.attributes['data-id'].value);
-    if (state.addedToCart.filter(({ id }) => (id === idProduct)).length > 0) {
+    const productId = Number.parseInt(elBtn.attributes['data-id'].value, 10);
+    const selectedProduct = state.products[productId];
+
+    if (selectedProduct.inCart) {
       return;
     }
-    state.addedToCart = [...state.addedToCart, state.products];
-    state.totalInCart += 1;
+
+    state.products[productId] = { ...selectedProduct, inCart: true };
+    state.totalOnCart += 1;
   }));
 
-  watch(state, 'addedToCart', (prop, action, newvalue, oldvalue) => {
-    console.log(newvalue)
-    const newProduct = newvalue[newvalue.length - 1];
-    const elButtonAddToCart = document.querySelector(`.popular-products button[action="addToCart"][data-id="${newProduct.id}"]`);
+  watch(state, 'products', (prop, action, newvalue) => {
+    const elButtonAddToCart = document.querySelector(`.popular-products button[action="addToCart"][data-id="${newvalue.id}"]`);
     elButtonAddToCart.classList.remove('btn-outline-primary');
     elButtonAddToCart.classList.add('btn-primary');
     elButtonAddToCart.innerHTML = '<span class="btn-sub-icon icon__check"></span> В КОРЗИНE';
   });
 
-  watch(state, 'totalInCart', (prop, action, newvalue) => {
+  watch(state, 'totalOnCart', (prop, action, newvalue) => {
     elTotalCart.innerHTML = `(${newvalue})`;
   });
 };
