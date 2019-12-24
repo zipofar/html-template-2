@@ -14,4 +14,4 @@ build:
 	NODE_ENV=production npx webpack
 
 deploy: build lint
-	git push origin master
+	git add -A && git commit -m 'Build' && git push origin master
