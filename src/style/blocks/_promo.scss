@@ -7,7 +7,19 @@
 }
 
 .promo__item-right {
+  overflow: hidden;
   width: 120%;
+}
+
+.promo__swiper-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+}
+
+.promo__swiper-slide {
+  flex-shrink: 0;
+  height: 100%;
 }
 
 .promo__text-item {
