@@ -81,11 +81,23 @@ const renderProductCard = (props) => {
   `;
 };
 
-export default () => {
+const getState = () => {
+  const stateFromStorage = localStorage.getItem('state');
+  if (stateFromStorage !== null) {
+    return JSON.parse(stateFromStorage);
+  }
+
   const state = {
     products,
     totalOnCart: Object.keys(products).filter((key) => products[key].inCart).length,
   };
+
+  localStorage.setItem('state', JSON.stringify(state));
+  return state;
+};
+
+export default () => {
+  const state = getState();
 
   const elMountPopularProducrs = document.getElementById('mount-pop-products');
   const htmlProducts = Object.keys(state.products).map((key) => (renderProductCard(state.products[key]))).join('');
@@ -106,6 +118,7 @@ export default () => {
 
     state.products[productId] = { ...selectedProduct, inCart: true };
     state.totalOnCart += 1;
+    localStorage.setItem('state', JSON.stringify(state));
   }));
 
   watch(state, 'products', (prop, action, newvalue) => {
