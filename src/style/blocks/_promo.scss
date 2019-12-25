@@ -1,5 +1,21 @@
 .promo {
   display: flex;
+  position: relative;
+}
+
+.promo__swiper-btn-prev {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  background: transparent;
+}
+
+.promo__swiper-btn-next {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  z-index: 1;
+  background: transparent;
 }
 
 .promo__item-left {
