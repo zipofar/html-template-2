@@ -3,19 +3,26 @@
   position: relative;
 }
 
-.promo__swiper-btn-prev {
+@mixin promo__swiper-btn {
   position: absolute;
-  left: 0;
   top: 50%;
   background: transparent;
+  z-index: 1;
+  opacity: .5;
+  &:hover {
+    background: transparent;
+  }
+}
+
+.promo__swiper-btn-prev {
+  @include promo__swiper-btn;
+  left: 0;
+  transform: rotateZ(180deg);
 }
 
 .promo__swiper-btn-next {
-  position: absolute;
+  @include promo__swiper-btn;
   right: 0;
-  top: 50%;
-  z-index: 1;
-  background: transparent;
 }
 
 .promo__item-left {
@@ -56,6 +63,7 @@
 
 .promo__btn {
   margin-top: 23px;
+  margin-bottom: 100px;
   padding: getRem(16) getRem(36);
   text-transform: uppercase;
 }
@@ -70,13 +78,17 @@
 }
 
 .carousel-controls {
-  margin-top: getRem(100);
+  position: absolute;
+  bottom: getRem(50);
+  left: getRem(90);
 }
 
 .carousel-controls__btn {
   margin: 0 getRem(9);
-  height: getRem(18);
-  width: getRem(18);
+  height: 10px;
+  width: 10px;
+  outline: none;
+  display: inline-block;
   background: transparent;
   border: getRem(1) solid $white;
   border-radius: getRem(9);
@@ -87,7 +99,7 @@
   }
 }
 
-.carousel-controls__btn-active {
+.carousel-controls__btn.swiper-pagination-bullet-active {
   background: $white;
   &:hover {
     opacity: 1;
