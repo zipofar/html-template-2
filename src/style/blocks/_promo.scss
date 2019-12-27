@@ -32,6 +32,12 @@
 .promo__item-right {
   overflow: hidden;
   width: 120%;
+    @media screen and (max-width: map-get($breakpoints, md)) {
+      display: none;
+    }
+    @media screen and (min-width: map-get($breakpoints, md)) and (max-width: map-get($breakpoints, lg)) {
+      width: 100%;
+    }
 }
 
 .promo__swiper-wrapper {
@@ -54,6 +60,15 @@
   background-size: cover;
   padding: getRem(160) getRem(50) getRem(50) getRem(90);
   box-sizing: border-box;
+    @media screen and (max-width: map-get($breakpoints, md)) {
+      padding: getRem(30) getRem(30) getRem(25) getRem(30);
+    }
+    @media screen and (min-width: map-get($breakpoints, md)) and (max-width: map-get($breakpoints, lg)) {
+      padding: getRem(45) getRem(40) getRem(40) getRem(50);
+    }
+    @media screen and (min-width: map-get($breakpoints, lg)) and (max-width: map-get($breakpoints, xl)) {
+      padding: getRem(100) getRem(40) getRem(40) getRem(50);
+    }
 }
 
 .promo__text {
@@ -84,6 +99,9 @@
   position: absolute;
   bottom: getRem(50);
   left: getRem(90);
+    @media screen and (max-width: map-get($breakpoints, md)) {
+      display: none;
+    }
 }
 
 .carousel-controls__btn {
@@ -109,21 +127,4 @@
   }
 }
 
-@media screen and (min-width: map-get($breakpoints, md)) and (max-width: map-get($breakpoints, lg)) {
-  .promo__item-right {
-    width: 100%;
-  }
-  .promo__text-item {
-    padding: getRem(90) getRem(40) getRem(40) getRem(50);
-  }
-}
 
-@media screen and (max-width: map-get($breakpoints, md)) {
-  .promo__item-right, .carousel-controls {
-    display: none;
-  }
-
-  .promo__text-item {
-    padding: getRem(30) getRem(30) getRem(25) getRem(30);
-  }
-}
