@@ -66,6 +66,9 @@
   margin-bottom: 100px;
   padding: getRem(16) getRem(36);
   text-transform: uppercase;
+    @media (min-width: 0) and (max-width: map-get($breakpoints, md)) {
+      margin-bottom: 0;
+    }
 }
 
 .promo__img-item {
