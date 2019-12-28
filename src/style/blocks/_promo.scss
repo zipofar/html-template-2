@@ -8,16 +8,20 @@
   top: 50%;
   background: transparent;
   z-index: 1;
-  opacity: .5;
+  font-size: .3rem;
+  box-shadow: none;
+  &:before {
+    width: .5rem;
+  }
   &:hover {
     background: transparent;
+    box-shadow: none;
   }
 }
 
 .promo__swiper-btn-prev {
   @include promo__swiper-btn;
   left: 0;
-  transform: rotateZ(180deg);
 }
 
 .promo__swiper-btn-next {

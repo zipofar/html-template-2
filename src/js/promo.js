@@ -8,8 +8,8 @@ export default () => (new Swiper('.promo__item-right', {
   pagination: {
     el: '.carousel-controls',
     clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + ' carousel-controls__btn"></span>';
-    },
+    renderBullet: (_, className) => (
+      `<span class="${className} carousel-controls__btn"></span>`
+    ),
   },
 }));

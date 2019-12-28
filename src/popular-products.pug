@@ -1,4 +1,9 @@
 section(class="popular-products main-section")
   .popular-products__header-block
     h2.popular-products__header.text-dark Популярные товары
-  .popular-products__cards-block(id="mount-pop-products")
+  .popular-products__cards-block
+    button.btn.btn-primary.btn-icon.popular-products__swiper-btn-prev
+      |<span class="btn-fill-icon icon__arrow-left-nav"></span>
+    button.btn.btn-primary.btn-icon.popular-products__swiper-btn-next
+      |<span class="btn-fill-icon icon__arrow-right-nav"></span>
+    .popular-products__swiper-wrapper.swiper-wrapper(id="mount-pop-products")

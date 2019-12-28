@@ -1,4 +1,5 @@
 import { watch } from 'melanke-watchjs';
+import Swiper from 'swiper';
 
 const products = {
   1: {
@@ -38,6 +39,28 @@ const products = {
   },
 };
 
+const setSwiper = () => (
+  new Swiper('.popular-products__cards-block',
+    {
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.popular-products__swiper-btn-next',
+        prevEl: '.popular-products__swiper-btn-prev',
+      },
+      breakpoints: {
+        992: {
+          slidesPerView: 2,
+        },
+        1200: {
+          slidesPerView: 3,
+        },
+        1470: {
+          slidesPerView: 4,
+        },
+      },
+    })
+);
+
 const renderProductCard = (props) => {
   const {
     markerIsNew,
@@ -50,7 +73,7 @@ const renderProductCard = (props) => {
   } = props;
 
   return `
-    <div class="product-card">
+    <div class="product-card swiper-slide">
       <div class="product-card__image-wrapper">
         ${markerIsNew ? '<div class="product-card__marker">новинка</div>' : ''}
         <a href="#" class="product-card__image-link">
@@ -100,8 +123,13 @@ export default () => {
   const state = getState();
 
   const elMountPopularProducrs = document.getElementById('mount-pop-products');
-  const htmlProducts = Object.keys(state.products).map((key) => (renderProductCard(state.products[key]))).join('');
+  const htmlProducts = Object
+    .keys(state.products)
+    .map((key) => (renderProductCard(state.products[key])))
+    .join('');
+
   elMountPopularProducrs.innerHTML = htmlProducts;
+  setSwiper();
 
   const elButtonsAddToCart = document.querySelectorAll('.popular-products button[action="addToCart"]');
   const elTotalCart = document.getElementById('total-in-cart');
